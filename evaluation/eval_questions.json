@@ -1,0 +1,159 @@
+[
+  {
+    "id": "Q1",
+    "answerable": true,
+    "question": "What chunk size and overlap does the guide use as starting values?",
+    "reference_answer": "900 characters with 150 characters of overlap, presented as starting values and not universal best settings.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 17
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 18
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "answerable": true,
+    "question": "Which FAISS index type performs exact search and which similarity does it use?",
+    "reference_answer": "IndexFlatIP performs exact search using inner-product similarity; with normalized embeddings this corresponds to cosine similarity.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "answerable": true,
+    "question": "How is Mean Reciprocal Rank computed?",
+    "reference_answer": "Reciprocal rank is 1 divided by the rank of the first relevant result (0 if none is retrieved); MRR is the average over all evaluation questions.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 36
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "answerable": true,
+    "question": "How are Precision@k and Recall@k defined?",
+    "reference_answer": "Precision@k is the number of relevant passages among the top k divided by k; Recall@k is the number of relevant passages found in the top k divided by all known relevant passages.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 35
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "answerable": true,
+    "question": "Which generation model does the guide demonstrate?",
+    "reference_answer": "Qwen/Qwen2.5-3B-Instruct, loaded through Hugging Face Transformers.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 28
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "answerable": true,
+    "question": "What should be done when the text extracted from a PDF is empty?",
+    "reference_answer": "Check whether the PDF is scanned; scanned PDFs contain images instead of selectable text, so OCR may be needed.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 15
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "answerable": true,
+    "question": "Why must chunks.json keep the same order as the vectors added to FAISS?",
+    "reference_answer": "Because the vector positions returned by FAISS are used to select the matching chunk text and metadata; if the order differs the index and metadata are mismatched and both must be rebuilt together.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 8
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 24
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 25
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "answerable": true,
+    "question": "What privacy and licensing points should be checked when using a RAG system?",
+    "reference_answer": "Check where documents and questions are processed (local versus hosted models) and review the license terms of the model, the embedding model and the libraries.",
+    "relevant_pages": [
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 33
+      },
+      {
+        "source": "RAG_Detailed.pdf",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "U1",
+    "answerable": false,
+    "question": "What is the capital city of Australia?",
+    "reference_answer": "Not answerable from the documents: the system should abstain.",
+    "relevant_pages": []
+  },
+  {
+    "id": "U2",
+    "answerable": false,
+    "question": "What accuracy did the guide report for Qwen2.5-3B-Instruct on the MMLU benchmark?",
+    "reference_answer": "Not answerable from the documents: the guide reports no benchmark accuracy.",
+    "relevant_pages": []
+  },
+  {
+    "id": "U3",
+    "answerable": false,
+    "question": "Who is the author of the guide and which university published it?",
+    "reference_answer": "Not answerable from the documents: no author or institution is stated in the guide.",
+    "relevant_pages": []
+  }
+]
