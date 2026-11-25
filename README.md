@@ -5,7 +5,7 @@ An end-to-end, reproducible **RAG** pipeline for Google Colab: upload PDFs, extr
 with filenames, page numbers and similarity scores. Includes retrieval metrics (Precision@K, Recall@K, MRR), a human evaluation
 rubric, reproducible experiments and a Gradio interface.
 
-> Academic project - 5th year Computer Science Engineering (Artificial Intelligence). Author: _[your name]_.
+> Academic project - 5th year Computer Science Engineering (Artificial Intelligence). Author: _LABANI NABILA NOUR ELHOUDA_.
 
 ## Objectives
 1. Build a document index from PDFs (extract, clean, chunk, embed, store).
