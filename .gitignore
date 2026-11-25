@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Private / large data - never commit
+data/documents/*
+!data/documents/.gitkeep
+artifacts/
+*.faiss
+chunks.json
+index_config.json
+
+# Model files and caches
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+.cache/
+huggingface/
+
+# Secrets
+*.key
+.hf_token
+secrets.*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
