@@ -65,7 +65,7 @@ rag-intelligent-document-assistant/
 
 ## Google Colab execution
 1. Push the repository to GitHub, then open the notebook in Colab:
-   `https://colab.research.google.com/github/<your-username>/<your-repo>/blob/main/notebooks/RAG_Intelligent_Document_Assistant.ipynb`
+   `https://colab.research.google.com/github/labaninabila193-code/rag-intelligent-document-assistant/blob/main/notebooks/RAG_Intelligent_Document_Assistant.ipynb`
    (or upload the `.ipynb` through *File -> Upload notebook*).
 2. `Runtime -> Change runtime type -> GPU (T4)` (recommended; CPU works but generation is very slow).
 3. `Runtime -> Run all`. When the upload cell appears, choose your PDF files (e.g. `RAG_Detailed.pdf`).
